@@ -1,0 +1,428 @@
+/* MENU DE HAMBURGUESA */
+
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 230px;
+    height: 100%;
+    background: #E0FFC3;
+    padding: 60px 15px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    z-index: 1000;
+}
+
+.menu-lateral h2 {
+    text-align: center;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #65445B;
+}
+
+.menu-lateral a:hover {
+    background: #FFC3E5;
+}
+
+/* ABRIR MENU */
+
+#menu:checked ~ .menu-lateral {
+    left: 0;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: linear-gradient(135deg, #E0FFC3, #FFC3E5);
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 25px 25px;
+}
+
+header h1 {
+    color: #8A4D79;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #65445B;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 18px;
+}
+
+/* ORDEN GENERAL */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", sans-serif;
+    background: #FFFAF2;
+    color: #65445B;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+p {
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+section {
+    padding: 35px 20px;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+/* PRODUCTOS */
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.categorias a {
+    text-align: center;
+    text-decoration: none;
+    color: #8A4D79;
+    background: #FFC3E5;
+    padding: 25px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.categorias a:hover {
+    background: #E0FFC3;
+}
+h2 {
+    text-align: center;
+}
+
+/* GALERIA */
+
+.galeria img {
+    width: 95%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    margin: 25px auto;
+    border-radius: 20px;
+}
+
+/* CATEGORIAS Y PRODUCTOS */
+
+.pagina-categoria {
+    background: linear-gradient(135deg, #E0FFC3, #FFC3E5);
+    min-height: 100vh;
+}
+
+/* TITULO DE CATEGORIA */
+
+.pagina-categoria h1 {
+    text-align: center;
+    color: #8A4D79;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    padding: 20px;
+}
+
+/* DISTRIBUCION DE PRODUCTOS */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* CADA PRODUCTO */
+
+.producto {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 12px;
+    border-radius: 15px;
+}
+
+/* IMAGENES */
+
+.producto img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+/* BORDES ALTERNADOS */
+
+.producto:nth-child(odd) img {
+    border: 5px solid #B9E99B;
+}
+
+.producto:nth-child(even) img {
+    border: 5px solid #F3A9D0;
+}
+
+/* NOMBRES DE PRODUCTOS */
+
+.producto p {
+    text-align: center;
+    color: #65445B;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+/* ENLACE REGRESAR */
+
+.pagina-categoria > a {
+    display: block;
+    text-align: center;
+    color: #8A4D79;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* ADAPTACION A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 750px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 12px;
+    }
+
+    .producto img {
+        height: 170px;
+    }
+}
+
+/* =================================
+   PAGINA DE INFORMACION - SYR STORE
+================================= */
+
+/* CONTENEDOR PRINCIPAL */
+.pagina {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* TITULO PRINCIPAL */
+.informacion > h1 {
+    text-align: center;
+    color: #8A4D79;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+/* BIENVENIDA */
+.bienvenida {
+    text-align: center;
+    background: #F5EBD8;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    color: #65445B;
+}
+
+/* APARTADOS */
+.apartado {
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(138,77,121,0.10);
+}
+
+.apartado:nth-of-type(odd) {
+    border: 4px solid #B9E99B;
+}
+
+.apartado:nth-of-type(even) {
+    border: 4px solid #F3A9D0;
+}
+
+/* TITULOS Y TEXTOS */
+.apartado h2 {
+    text-align: center;
+    color: #8A4D79;
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+}
+
+.apartado p {
+    color: #65445B;
+    font-family: "Trebuchet MS", sans-serif;
+    line-height: 1.7;
+}
+
+/* ===== CORRECCIONES INFORMACION ===== */
+
+/* ENVIOS CENTRADOS */
+.pagina-informacion .envios ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+}
+
+.pagina-informacion .envios li {
+    text-align: center;
+    margin: 12px 0;
+}
+
+/* ===== IMAGENES DE COMO COMPRAR Y PAGOS ===== */
+.pagina-informacion .imagen-completa {
+    display: block;
+    width: 90%;
+    max-width: 750px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+/* ===== REDES SOCIALES ===== */
+.pagina-informacion .redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transform: translateX(20px);
+}
+
+/* IMAGEN DE REDES */
+.pagina-informacion .imagen-redes {
+    flex: 0 1 230px;
+    width: 230px;
+}
+
+.pagina-informacion .imagen-redes img {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* TEXTO DE REDES */
+.pagina-informacion .texto-redes {
+    flex: 1;
+    text-align: center;
+}
+
+/* =================================
+   PREGUNTAS FRECUENTES
+================================= */
+
+.pregunta {
+    background: #FFF1F8;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border-left: 5px solid #F3A9D0;
+}
+
+.pregunta:nth-child(even) {
+    background: #F1FFE8;
+    border-left-color: #B9E99B;
+}
+
+/* =================================
+   DESPEDIDA
+================================= */
+
+.final {
+    background: linear-gradient(135deg, #E0FFC3, #FFC3E5);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.final h2 {
+    color: #8A4D79;
+    font-family: Georgia, serif;
+}
+
+.final p {
+    color: #65445B;
+}
+
+/* =================================
+   REGRESAR AL INICIO
+================================= */
+
+.volver-inicio {
+    display: block;
+    text-align: center;
+    margin: 25px auto;
+    color: #8A4D79;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+}
+
+/* =================================
+   ADAPTACION PARA CELULARES
+================================= */
+
+.pagina-informacion .imagen-completa {
+        width: 100%;
+        max-width: 750px;
+        height: auto;
+    }
+
+    .pagina-informacion .redes {
+        flex-direction: column;
+        gap: 15px;
+        transform: none;
+    }
+
+    .pagina-informacion .imagen-redes {
+        width: 100%;
+        max-width: 220px;
+        flex: none;
+    }
+
+    .pagina-informacion .imagen-redes img {
+        max-width: 220px;
+    }
+
+    .pagina-informacion .texto-redes {
+        width: 100%;
+    }
